@@ -4,7 +4,7 @@ url: versapay.streamdata.gallery
 tag: VersaPay
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
-github_user: streamdata-gallery
+github_user: streamdata-gallery-entities
 github_repo: versapay
 github_branch: master
 collections:
