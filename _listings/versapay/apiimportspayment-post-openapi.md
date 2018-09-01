@@ -4,18 +4,27 @@ x-collection-name: VersaPay
 x-complete: 0
 info:
   title: VersaPay Create a Payment
-  description: "Create and update external payment records in ARC.<br><br>The set
-    of attributes to send in the request body may vary based on the account configuration.
-    Please contact the implementation specialist for more information.<br><br>\nThe
-    request schema for posting a payment for a single invoice is slightly different
-    than that for posting a payment for multiple invoices.\n\nFor instance, sample
-    request for posting payment for a single invoice looks like:\n```\n{\n  \"identifier\":
-    \"PMT0010-05\",\n  \"invoice_number\": \"INV1234-01\",\n  \"amount\": 10000,\n
-    \ \"currency\": \"usd\",\n  \"date\": \"2018-01-10\",\n  \"customer_identifier\":
-    \"C1234\",\n  \"customer_name\": \"Acme Inc.\",\n  \"notes\": \"Notes\",\n  \"ref1\":
-    \"1234\",\n  \"ref2\": \"PO# 84767\"\n}\n```\n\n*Note: Customer will be created
-    using the customer_&ast; attributes if it doesn\u2019t already exist at the time
-    of payment import.*"
+  description: |-
+    Create and update external payment records in ARC.<br><br>The set of attributes to send in the request body may vary based on the account configuration. Please contact the implementation specialist for more information.<br><br>
+    The request schema for posting a payment for a single invoice is slightly different than that for posting a payment for multiple invoices.
+
+    For instance, sample request for posting payment for a single invoice looks like:
+    ```
+    {
+      "identifier": "PMT0010-05",
+      "invoice_number": "INV1234-01",
+      "amount": 10000,
+      "currency": "usd",
+      "date": "2018-01-10",
+      "customer_identifier": "C1234",
+      "customer_name": "Acme Inc.",
+      "notes": "Notes",
+      "ref1": "1234",
+      "ref2": "PO# 84767"
+    }
+    ```
+
+    *Note: Customer will be created using the customer_&ast; attributes if it doesn???t already exist at the time of payment import.*
   contact:
     name: VersaPay Support
     url: https://www.versapay.com/support
@@ -383,18 +392,27 @@ paths:
   /api/imports/payment:
     post:
       summary: Create a Payment
-      description: "Create and update external payment records in ARC.<br><br>The
-        set of attributes to send in the request body may vary based on the account
-        configuration. Please contact the implementation specialist for more information.<br><br>\nThe
-        request schema for posting a payment for a single invoice is slightly different
-        than that for posting a payment for multiple invoices.\n\nFor instance, sample
-        request for posting payment for a single invoice looks like:\n```\n{\n  \"identifier\":
-        \"PMT0010-05\",\n  \"invoice_number\": \"INV1234-01\",\n  \"amount\": 10000,\n
-        \ \"currency\": \"usd\",\n  \"date\": \"2018-01-10\",\n  \"customer_identifier\":
-        \"C1234\",\n  \"customer_name\": \"Acme Inc.\",\n  \"notes\": \"Notes\",\n
-        \ \"ref1\": \"1234\",\n  \"ref2\": \"PO# 84767\"\n}\n```\n\n*Note: Customer
-        will be created using the customer_&ast; attributes if it doesn\u2019t already
-        exist at the time of payment import.*"
+      description: |-
+        Create and update external payment records in ARC.<br><br>The set of attributes to send in the request body may vary based on the account configuration. Please contact the implementation specialist for more information.<br><br>
+        The request schema for posting a payment for a single invoice is slightly different than that for posting a payment for multiple invoices.
+
+        For instance, sample request for posting payment for a single invoice looks like:
+        ```
+        {
+          "identifier": "PMT0010-05",
+          "invoice_number": "INV1234-01",
+          "amount": 10000,
+          "currency": "usd",
+          "date": "2018-01-10",
+          "customer_identifier": "C1234",
+          "customer_name": "Acme Inc.",
+          "notes": "Notes",
+          "ref1": "1234",
+          "ref2": "PO# 84767"
+        }
+        ```
+
+        *Note: Customer will be created using the customer_&ast; attributes if it doesn???t already exist at the time of payment import.*
       operationId: createPayment
       x-api-path-slug: apiimportspayment-post
       parameters:

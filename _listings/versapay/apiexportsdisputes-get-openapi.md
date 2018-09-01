@@ -373,18 +373,27 @@ paths:
   /api/imports/payment:
     post:
       summary: Create a Payment
-      description: "Create and update external payment records in ARC.<br><br>The
-        set of attributes to send in the request body may vary based on the account
-        configuration. Please contact the implementation specialist for more information.<br><br>\nThe
-        request schema for posting a payment for a single invoice is slightly different
-        than that for posting a payment for multiple invoices.\n\nFor instance, sample
-        request for posting payment for a single invoice looks like:\n```\n{\n  \"identifier\":
-        \"PMT0010-05\",\n  \"invoice_number\": \"INV1234-01\",\n  \"amount\": 10000,\n
-        \ \"currency\": \"usd\",\n  \"date\": \"2018-01-10\",\n  \"customer_identifier\":
-        \"C1234\",\n  \"customer_name\": \"Acme Inc.\",\n  \"notes\": \"Notes\",\n
-        \ \"ref1\": \"1234\",\n  \"ref2\": \"PO# 84767\"\n}\n```\n\n*Note: Customer
-        will be created using the customer_&ast; attributes if it doesn\u2019t already
-        exist at the time of payment import.*"
+      description: |-
+        Create and update external payment records in ARC.<br><br>The set of attributes to send in the request body may vary based on the account configuration. Please contact the implementation specialist for more information.<br><br>
+        The request schema for posting a payment for a single invoice is slightly different than that for posting a payment for multiple invoices.
+
+        For instance, sample request for posting payment for a single invoice looks like:
+        ```
+        {
+          "identifier": "PMT0010-05",
+          "invoice_number": "INV1234-01",
+          "amount": 10000,
+          "currency": "usd",
+          "date": "2018-01-10",
+          "customer_identifier": "C1234",
+          "customer_name": "Acme Inc.",
+          "notes": "Notes",
+          "ref1": "1234",
+          "ref2": "PO# 84767"
+        }
+        ```
+
+        *Note: Customer will be created using the customer_&ast; attributes if it doesn???t already exist at the time of payment import.*
       operationId: createPayment
       x-api-path-slug: apiimportspayment-post
       parameters:
@@ -418,11 +427,12 @@ paths:
       - Batches
     post:
       summary: Import a CSV File
-      description: "When uploading a CSV-formatted file it\u2019s helpful to use your
-        language/framework tooling to simplify the [multipart/form-data](https://www.ietf.org/rfc/rfc2388.txt)
-        file upload.\n### Size Limit\nThe file cannot exceed 25MB.\n### Layouts\nPlease
-        contact support@versapay.com or reach out to your implementation specialist
-        for standard inbound CSV file layouts."
+      description: |-
+        When uploading a CSV-formatted file it???s helpful to use your language/framework tooling to simplify the [multipart/form-data](https://www.ietf.org/rfc/rfc2388.txt) file upload.
+        ### Size Limit
+        The file cannot exceed 25MB.
+        ### Layouts
+        Please contact support@versapay.com or reach out to your implementation specialist for standard inbound CSV file layouts.
       operationId: importBatchFile
       x-api-path-slug: apiimports-post
       parameters:
